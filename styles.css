@@ -1,0 +1,27 @@
+.header {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.quick-embed,
+.ts-embed,
+#centeringContainer {
+  text-align: -webkit-center;
+}
+.viz-container {
+  padding-left: 30em;
+}
+.exportPDF,
+.exportPP {
+  cursor: pointer;
+  background: #527aa8;
+  color: white;
+  margin-bottom: 10px;
+  font-size: x-large;
+}
+.exportPP {
+  background: #d8883d;
+}
+.filters {
+  padding: 20px;
+}

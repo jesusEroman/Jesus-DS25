@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Jesus Tableau Embed Web 🖥️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      f="integrity"
+      ="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY="
+      crossorigin="anonymous"
+    />
+    <script src="./app.js"></script>
+    <script
+      text="text/javascript"
+      src="https://public.tableau.com/javascripts/api/tableau-2.min.js"
+    ></script>
+  </head>
+  <body onload="initViz()">
+    <header class="header">
+      <h1>Jesus Tableau Embed Web 🖥️</h1>
+      <h2>The Information Lab Data School Back to School 2</h2>
+    </header>
+    <!-- <div class="quick-embed">
+      <div
+        class="tableauPlaceholder"
+        id="viz1670410422715"
+        style="position: relative"
+      >
+        <noscript
+          ><a href="#"
+            ><img
+              alt="Embedding Dashboard "
+              src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Em&#47;EmbeddingDashboard_16704095775320&#47;EmbeddingDashboard&#47;1_rss.png"
+              style="border: none" /></a></noscript
+        ><object class="tableauViz" style="display: none">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+          <param name="embed_code_version" value="3" />
+          <param name="site_root" value="" />
+          <param
+            name="name"
+            value="EmbeddingDashboard_16704095775320&#47;EmbeddingDashboard"
+          />
+          <param name="tabs" value="no" />
+          <param name="toolbar" value="yes" />
+          <param
+            name="static_image"
+            value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Em&#47;EmbeddingDashboard_16704095775320&#47;EmbeddingDashboard&#47;1.png"
+          />
+          <param name="animate_transition" value="yes" />
+          <param name="display_static_image" value="yes" />
+          <param name="display_spinner" value="yes" />
+          <param name="display_overlay" value="yes" />
+          <param name="display_count" value="yes" />
+          <param name="language" value="en-GB" />
+          <param name="filter" value="publish=yes" />
+        </object>
+      </div>
+      <script type="text/javascript">
+        var divElement = document.getElementById("viz1670410422715");
+        var vizElement = divElement.getElementsByTagName("object")[0];
+        if (divElement.offsetWidth > 800) {
+          vizElement.style.width = "1000px";
+          vizElement.style.height = "827px";
+        } else if (divElement.offsetWidth > 500) {
+          vizElement.style.width = "1000px";
+          vizElement.style.height = "827px";
+        } else {
+          vizElement.style.width = "100%";
+          vizElement.style.height = "727px";
+        }
+        var scriptElement = document.createElement("script");
+        scriptElement.src =
+          "https://public.tableau.com/javascripts/api/viz_v1.js";
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+    </div> -->
+    <div class="ts-embed">
+      <div class="export-btns">
+        <button class="exportPDF" id="exportPDF" onclick="exportPDFfunction()">
+          Export PDF
+        </button>
+        <button class="exportPP" id="exportPP" onclick="exportPPfunction()">
+          Export PP
+        </button>
+      </div>
+      <div class="filters">
+        <h2>Filters</h2>
+        <input
+          id="minValue"
+          class="input-filter"
+          type="number"
+          placeholder="Min Value"
+        />
+        <input
+          id="maxValue"
+          class="input-filter"
+          type="number"
+          placeholder="Max Value"
+        />
+        <button
+          id="filterButton"
+          onclick="getRangeValues()"
+          class="btn btn-primary"
+        >
+          Filter!
+        </button>
+      </div>
+      <div id="vizContainer" class="viz-container"></div>
+    </div>
+  </body>
+</html>
